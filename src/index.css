@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gray-900;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background: linear-gradient(to bottom right, #2d3748, #2b6cb0);
+  }
+
+  25% {
+    background: linear-gradient(to bottom right, #9f7aea, #ed64a6);
+  }
+
+  50% {
+    background: linear-gradient(to bottom right, #48bb78, #4299e1);
+  }
+
+  75% {
+    background: linear-gradient(to bottom right, #ecc94b, #f56565);
+  }
+
+  100% {
+    background: linear-gradient(to bottom right, #2d3748, #2b6cb0);
+  }
+}
+
+.gradient-bg {
+  animation: gradientAnimation 120s ease infinite;
+}

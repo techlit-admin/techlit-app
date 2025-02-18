@@ -1,2 +1,1 @@
-# techlit-app
-Techlit website development company
+This is techLit App

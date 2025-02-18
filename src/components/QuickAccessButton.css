@@ -1,0 +1,48 @@
+.quick-access-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .quick-access-btn {
+    background-color: #024b04;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quick-access-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .quick-access-icons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .quick-access-icons button {
+    background-color: transparent;
+    border: none;
+    margin: 10px 5px;
+    padding: 15px 10px;
+    border-radius: 70%;
+    box-shadow: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .quick-access-icons button:hover {
+    transform: scale(1.1);
+  }
+  
+  .quick-access-icons button:focus {
+    outline: none;
+  }
+  

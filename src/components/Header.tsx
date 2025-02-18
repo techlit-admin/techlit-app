@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Menu, X, CheckCircle } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Logo from '../assets/logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,11 +16,11 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 shadow-lg z-50">
+    <header className="fixed w-full bg-gradient-to-r from-gray-200 via-gray-500 to-gray-600 shadow-lg z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <img src="./src/assets/logo.png" style={{ imageRendering: 'revert-layer' }} alt="Techlit Logo" className="h-11 w-26" />
+            <img src={Logo} style={{ imageRendering: 'revert-layer' }} alt="Techlit Logo" className="h-11 w-26" />
           </div>
 
           {/* Desktop Navigation */}
@@ -28,7 +29,7 @@ const Header = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="text-gray-300 hover:text-blue-400 transition-colors capitalize"
+                className="text-dark-300 hover:text-gray-400 transition-colors capitalize"
               >
                 {item}
               </button>
@@ -37,7 +38,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-dark"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

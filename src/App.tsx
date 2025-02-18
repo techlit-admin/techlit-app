@@ -7,6 +7,7 @@ import Packages from './components/Packages';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import QuickAccessButton from './components/QuickAccessButton';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Portfolio />
       <Contact />
       <Footer />
+      <QuickAccessButton/>
     </div>
   );
 }

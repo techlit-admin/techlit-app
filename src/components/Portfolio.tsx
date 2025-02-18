@@ -1,5 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
+import Occasia from '../assets/occasia.jpg';
+import RkBallons from '../assets/rkballons.jpg';
 
 const Portfolio = () => {
   const { ref, inView } = useInView({
@@ -10,7 +12,7 @@ const Portfolio = () => {
   const projects = [
     {
       name: 'Occasia.in',
-      image: 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80',
+      image: Occasia,
       description: 'E-commerce platform for occasion wear'
     },
     {
@@ -20,7 +22,7 @@ const Portfolio = () => {
     },
     {
       name: 'rkballoons.com',
-      image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80',
+      image: RkBallons,
       description: 'Event decoration services'
     }
   ];

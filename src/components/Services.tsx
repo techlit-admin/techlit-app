@@ -30,18 +30,20 @@ const Services = () => {
     <section
       id="services"
       ref={ref}
-      className={`py-16 bg-gray-900 transition-opacity duration-1000 transform ${inView ? 'opacity-100' : 'opacity-0'
-        }`}
+      className={`py-16 bg-gray-900 transition-opacity duration-1000 transform ${inView ? 'opacity-100' : 'opacity-0'}`}
     >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-white mb-12">Our Services</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service) => (
-            <div key={service.title} className={`bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl flex flex-col`}>
-              <service.icon className="h-12 w-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+            <div
+              key={service.title}
+              className="bg-gradient-to-br from-gray-100 to-gray-300 dark:from-gray-700 dark:to-gray-800 p-6 rounded-lg shadow-neumorph hover:shadow-xl transform hover:scale-105 flex flex-col transition-transform"
+            >
+              <service.icon className="h-12 w-12 text-blue-400 mb-4 mx-auto" />
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2 text-center">{service.title}</h3>
               {service.items ? (
-                <ul className="mt-4 text-gray-300 flex-grow">
+                <ul className="mt-4 text-gray-800 dark:text-gray-300 flex-grow">
                   {service.items.map((item, index) => (
                     <li key={index} className="flex items-center">
                       <span className="mr-2">•</span> {item}
@@ -49,7 +51,7 @@ const Services = () => {
                   ))}
                 </ul>
               ) : (
-                <p className="text-gray-300 flex-grow">{service.description}</p>
+                <p className="text-gray-800 dark:text-gray-300 flex-grow">{service.description}</p>
               )}
             </div>
           ))}

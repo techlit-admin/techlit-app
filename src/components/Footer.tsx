@@ -1,17 +1,18 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
+import Logo from '../assets/logo.png';
 
 const Footer = () => {
   const navItems = ['Home', 'About Us', 'Services', 'Packages', 'Portfolio', 'Contact Us'];
   const services = ['Digital Marketing', 'Website Development', 'Branding & Design'];
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-dark-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <img src="./src/assets/logo.png" style={{ imageRendering: 'revert-layer', backgroundBlendMode: "hue" }} alt="Techlit Logo" className="h-11 w-26" />
+              <img src={Logo} style={{ imageRendering: 'revert-layer', backgroundBlendMode: "hue" }} alt="Techlit Logo" className="h-11 w-26" />
             </div>
             <p className="text-gray-400">Empowering businesses with innovative digital solutions.</p>
           </div>

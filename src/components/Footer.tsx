@@ -1,10 +1,17 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
 import Logo from '../assets/logo.png';
 
 const Footer = () => {
   const navItems = ['Home', 'About Us', 'Services', 'Packages', 'Portfolio', 'Contact Us'];
   const services = ['Digital Marketing', 'Website Development', 'Branding & Design'];
+
+  const onclickHandle = (type: string) => {
+    if (type === "phone") {
+      window.location.href = 'tel:+9676124330';
+    } else if (type === "mail") {
+      window.location.href = 'mailto:support@techlit.in'
+    }
+  }
 
   return (
     <footer className="bg-dark-900 text-white py-12">
@@ -42,8 +49,8 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-2">
-              <li className="text-gray-400">+91-9676124330</li>
-              <li className="text-gray-400">support@techlit.in</li>
+              <li onClick={() => onclickHandle('phone')} className="text-gray-400 cursor-pointer">+91-9676124330</li>
+              <li onClick={() => onclickHandle('mail')} className="text-gray-400 cursor-pointer">support@techlit.in</li>
               <li className="text-gray-400">www.techlit.in</li>
             </ul>
           </div>

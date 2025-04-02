@@ -2,6 +2,7 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import Occasia from '../assets/occasia.jpg';
 import RkBallons from '../assets/rkballons.jpg';
+import { ArrowRight } from 'lucide-react';
 
 const Portfolio = () => {
   const { ref, inView } = useInView({
@@ -27,6 +28,10 @@ const Portfolio = () => {
     }
   ];
 
+  const handleClick = (link: string) => {
+    window.open("https://" + link)
+  }
+
   return (
     <section
       id="portfolio"
@@ -37,10 +42,13 @@ const Portfolio = () => {
         <h2 className="text-3xl font-bold text-center text-white mb-12">Our Portfolio</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div key={project.name} className={`bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform duration-1000 ${inView ? 'opacity-100 ' : 'opacity-0'} flex flex-col`}>
+            <div key={project.name} className={`bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform duration-1000 cursor-pointer ${inView ? 'opacity-100 ' : 'opacity-0'} flex flex-col`} onClick={() => handleClick(project.name)}>
               <img src={project.image} alt={project.name} className="h-48 w-full object-cover mb-4 rounded" />
               <h3 className="text-xl font-semibold text-white mb-2">{project.name}</h3>
               <p className="text-gray-300 flex-grow">{project.description}</p>
+              <a href={`https://${project.name}`} target="_blank" className="text-blue-600 flex items-center mt-4 hover:text-blue-700">
+                Visit Website <ArrowRight className="h-4 w-4 ml-2" />
+              </a>
             </div>
           ))}
         </div>

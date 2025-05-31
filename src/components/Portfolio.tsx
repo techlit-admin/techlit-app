@@ -78,7 +78,7 @@ const Portfolio = () => {
               <a
                 href={`https://${project.name}`}
                 target="_blank"
-                className="text-yellow-600 flex items-center mt-4 hover:text-blue-700"
+                className="text-yellow-500 flex items-center mt-4 hover:text-yellow-600"
               >
                 Visit Website <ArrowRight className="h-4 w-4 ml-2" />
               </a>

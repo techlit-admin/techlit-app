@@ -31,7 +31,7 @@ const About = () => {
           {benefits.map((benefit) => (
             <div
               key={benefit}
-              className="p-6 rounded-lg bg-gradient-to-br from-gray-100 to-cyan-300 dark:from-cyan-500 dark:to-indigo-900 text-center transform hover:scale-105 transition-transform hover:shadow-neumorph"
+              className="m-6 p-6 rounded-lg bg-gradient-to-br from-gray-100 to-cyan-300 dark:from-cyan-500 dark:to-indigo-900 text-center transform hover:scale-105 transition-transform hover:shadow-neumorph"
             >
               <CheckCircle className="h-12 w-12 text-dark-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">

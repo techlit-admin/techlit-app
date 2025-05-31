@@ -68,7 +68,7 @@ const Header = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="block w-full text-left text-gray-300 hover:text-blue-400 transition-colors capitalize py-2"
+                className="block w-full text-right text-gray-300 hover:text-blue-400 transition-colors capitalize py-2"
               >
                 {item}
               </button>

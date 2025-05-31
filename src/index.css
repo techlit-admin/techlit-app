@@ -1,14 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  @apply bg-gray-900;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  @apply bg-gray-900;
-}
 
 @keyframes gradientAnimation {
   0% {

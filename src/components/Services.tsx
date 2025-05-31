@@ -1,6 +1,6 @@
-import React from 'react';
-import { Laptop, Megaphone, Palette } from 'lucide-react';
-import { useInView } from 'react-intersection-observer';
+import React from "react";
+import { Laptop, Megaphone, Palette } from "lucide-react";
+import { useInView } from "react-intersection-observer";
 
 const Services = () => {
   const { ref, inView } = useInView({
@@ -10,38 +10,45 @@ const Services = () => {
 
   const services = [
     {
-      title: 'Digital Marketing',
+      title: "Digital Marketing",
       icon: Megaphone,
-      items: ['SEO', 'Social Media Marketing', 'PPC', 'Content Marketing']
+      items: ["SEO", "Social Media Marketing", "PPC", "Content Marketing"],
     },
     {
-      title: 'Website Development',
+      title: "Website Development",
       icon: Laptop,
-      description: 'Custom, responsive, and high-performing websites tailored to your needs'
+      description:
+        "Custom, responsive, and high-performing websites tailored to your needs",
     },
     {
-      title: 'Branding & Design',
+      title: "Branding & Design",
       icon: Palette,
-      items: ['Logo design', 'Graphics', 'Branding strategies']
-    }
+      items: ["Logo design", "Graphics", "Branding strategies"],
+    },
   ];
 
   return (
     <section
       id="services"
       ref={ref}
-      className={`py-16 bg-gray-900 transition-opacity duration-1000 transform ${inView ? 'opacity-100' : 'opacity-0'}`}
+      className={`py-16 bg-gray-800 transition-opacity duration-1000 transform ${
+        inView ? "opacity-100" : "opacity-0"
+      }`}
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-white mb-12">Our Services</h2>
+        <h2 className="text-3xl font-bold text-center text-white mb-12">
+          Our Services
+        </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service) => (
             <div
               key={service.title}
-              className="bg-gradient-to-br from-gray-100 to-gray-300 dark:from-gray-700 dark:to-gray-800 p-6 rounded-lg shadow-neumorph hover:shadow-xl transform hover:scale-105 flex flex-col transition-transform"
+              className="bg-gradient-to-br from-gray-100 to-gray-300 dark:from-cyan-700 dark:to-dark-800 p-6 rounded-lg hover:shadow-neumorph shadow-xl transform hover:scale-105 flex flex-col transition-transform"
             >
               <service.icon className="h-12 w-12 text-blue-400 mb-4 mx-auto" />
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2 text-center">{service.title}</h3>
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2 text-center">
+                {service.title}
+              </h3>
               {service.items ? (
                 <ul className="mt-4 text-gray-800 dark:text-gray-300 flex-grow">
                   {service.items.map((item, index) => (
@@ -51,7 +58,9 @@ const Services = () => {
                   ))}
                 </ul>
               ) : (
-                <p className="text-gray-800 dark:text-gray-300 flex-grow">{service.description}</p>
+                <p className="text-gray-800 dark:text-gray-300 flex-grow">
+                  {service.description}
+                </p>
               )}
             </div>
           ))}

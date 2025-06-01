@@ -49,7 +49,7 @@ const Portfolio = () => {
     <section
       id="portfolio"
       ref={ref}
-      className={`py-16 bg-gray-900 transition-all duration-1000 transform ${
+      className={`py-16 bg-gray-800 transition-all duration-1000 transform ${
         inView ? "opacity-100" : "opacity-0 scale-95"
       }`}
     >
@@ -61,7 +61,7 @@ const Portfolio = () => {
           {projects.map((project) => (
             <div
               key={project.name}
-              className={`bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform duration-1000 cursor-pointer ${
+              className={`bg-teal-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform duration-1000 cursor-pointer ${
                 inView ? "opacity-100 " : "opacity-0"
               } flex flex-col`}
               onClick={() => handleClick(project.name)}
@@ -78,7 +78,7 @@ const Portfolio = () => {
               <a
                 href={`https://${project.name}`}
                 target="_blank"
-                className="text-blue-600 flex items-center mt-4 hover:text-blue-700"
+                className="text-yellow-500 flex items-center mt-4 hover:text-yellow-600"
               >
                 Visit Website <ArrowRight className="h-4 w-4 ml-2" />
               </a>

@@ -5,14 +5,7 @@ import Logo from "../assets/logo.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navItems = [
-    "home",
-    "about",
-    "services",
-    "packages",
-    "portfolio",
-    "contact",
-  ];
+  const navItems = ["about", "services", "packages", "portfolio", "contact"];
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -23,8 +16,8 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full bg-gradient-to-r from-cyan-100 via-blue-400 to-green-400 shadow-lg z-50">
-      <div className="container mx-auto px-4 py-4">
+    <header className="fixed w-full bg-gradient-to-r from-white via-blue-200 to-green-200 shadow-lg z-50">
+      <div className="container mx-auto px-4 py-1">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <img
@@ -68,7 +61,7 @@ const Header = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="block w-full text-right text-gray-300 hover:text-blue-400 transition-colors capitalize py-2"
+                className="block w-full text-right text-dark hover:text-blue-400 transition-colors capitalize py-2"
               >
                 {item}
               </button>

@@ -47,15 +47,13 @@ const About = () => {
           {benefitData.map(({ text, icon: Icon, color }) => (
             <div
               key={text}
-              className="m-3 p-6 rounded-lg bg-gradient-to-br from-gray-100 to-cyan-300 dark:from-cyan-500 dark:to-indigo-900 text-center transform hover:scale-105 transition-transform hover:shadow-neumorph"
+              className="m-3 p-6 rounded-lg bg-gradient-to-br from-cyan-500 to-indigo-900 text-center transform hover:scale-105 transition-transform hover:shadow-neumorph"
             >
               <Icon
                 style={{ color }}
                 className="h-12 w-12 mx-auto mb-4 drop-shadow-lg"
               />
-              <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">
-                {text}
-              </h3>
+              <h3 className="text-xl font-semibold mb-2 text-white">{text}</h3>
             </div>
           ))}
         </div>

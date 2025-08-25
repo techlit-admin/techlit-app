@@ -72,19 +72,16 @@ const Packages = () => {
           {packages.map((pkg) => (
             <div
               key={pkg.name}
-              className="w-[80%] max-w-xs mx-auto md:w-[70%] lg:w-[90%] xl:w-[95%] bg-gradient-to-br from-gray-100 to-gray-300 dark:from-blue-800 dark:to-cyan-800 rounded-lg p-6 hover:shadow-neumorph shadow-xl transition-shadow flex flex-col"
+              className="w-[80%] max-w-xs mx-auto md:w-[70%] lg:w-[90%] xl:w-[95%] bg-gradient-to-br from-blue-800 to-cyan-800 rounded-lg p-6 hover:shadow-neumorph shadow-xl transition-shadow flex flex-col"
             >
-              <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-yellow-400 text-center">
+              <h3 className="text-xl font-semibold mb-4 text-yellow-400 text-center">
                 {pkg.name}
               </h3>
               <ul className="space-y-3 mb-6 flex-grow">
                 {pkg.features.map((feature) => (
-                  <li
-                    key={feature}
-                    className="flex items-center text-white-800 dark:text-white-800"
-                  >
+                  <li key={feature} className="flex items-center text-white">
                     <FcDownRight className="h-5 w-5 mr-2" />
-                    <span className="text-white">{feature}</span>
+                    <span>{feature}</span>
                   </li>
                 ))}
               </ul>

@@ -5,6 +5,7 @@ import Occasia from "../assets/occasia.png";
 import RkBallons from "../assets/RKBalloons.png";
 import Jyothishyam from "../assets/Jyothishyam.png";
 import BalloonsSpot from "../assets/BalloonSpot.png";
+import BalloonsHouse from "../assets/BalloonsHouse.png";
 import { ArrowRight } from "lucide-react";
 
 const Portfolio = () => {
@@ -15,29 +16,39 @@ const Portfolio = () => {
 
   const projects = [
     {
-      name: "Occasia.in",
+      name: "Occasia",
       image: Occasia,
-      description: "E-commerce platform for occasion wear",
+      description: "Event Management Services",
+      link: "Occasia.in",
     },
     {
-      name: "brush4blush.in",
+      name: "Brush4Blush",
       image: Brush4Blush,
-      description: "Beauty and cosmetics website",
+      description: "Beauty and Makeover Services",
+      link: "brush4blush.in",
     },
     {
-      name: "rkballoons.com",
+      name: "RK Balloons",
       image: RkBallons,
       description: "Event decoration services",
+      link: "rkballoons.com",
     },
     {
-      name: "jyothishyam.in",
+      name: "Jyothishyam",
       image: Jyothishyam,
-      description: "Event decoration services",
+      description: "Astrology Consultation Platform",
     },
     {
-      name: "balloonspot.in",
+      name: "Balloon Spot",
       image: BalloonsSpot,
       description: "Event decoration services",
+      link: "balloonspot.in",
+    },
+    {
+      name: "Balloons House",
+      image: BalloonsHouse,
+      description: "Event decoration services",
+      link: "balloonspot.in/balloon-house",
     },
   ];
 
@@ -57,14 +68,12 @@ const Portfolio = () => {
         <h2 className="text-3xl font-bold text-center text-white mb-12">
           Our Portfolio
         </h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-x-12 md:gap-y-10">
           {projects.map((project) => (
             <div
               key={project.name}
-              className={`bg-teal-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform duration-1000 cursor-pointer ${
-                inView ? "opacity-100 " : "opacity-0"
-              } flex flex-col`}
-              onClick={() => handleClick(project.name)}
+              className="w-[85vw] max-w-xs mx-auto md:w-full bg-teal-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform duration-1000 cursor-pointer flex flex-col"
+              onClick={() => handleClick(project.link ?? "")}
             >
               <img
                 src={project.image}
@@ -75,13 +84,16 @@ const Portfolio = () => {
                 {project.name}
               </h3>
               <p className="text-gray-300 flex-grow">{project.description}</p>
-              <a
-                href={`https://${project.name}`}
-                target="_blank"
-                className="text-yellow-500 flex items-center mt-4 hover:text-yellow-600"
-              >
-                Visit Website <ArrowRight className="h-4 w-4 ml-2" />
-              </a>
+              {project.link && (
+                <a
+                  href={`https://${project.link}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-yellow-500 flex items-center mt-4 hover:text-yellow-600"
+                >
+                  Visit Website <ArrowRight className="h-4 w-4 ml-2" />
+                </a>
+              )}
             </div>
           ))}
         </div>

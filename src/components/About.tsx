@@ -1,15 +1,31 @@
 import React from "react";
-import { CheckCircle } from "lucide-react";
+import { TrendingUp, Clock, Wallet, Sparkles } from "lucide-react";
 import { useInView } from "react-intersection-observer";
 
-const About = () => {
-  const benefits = [
-    "Result-Driven Strategies",
-    "On-Time Delivery",
-    "Affordable & Transparent Pricing",
-    "Innovative & Customized Solutions",
-  ];
+const benefitData = [
+  {
+    text: "Result-Driven Strategies",
+    icon: TrendingUp,
+    color: "#ef4444", // bright red
+  },
+  {
+    text: "On-Time Delivery",
+    icon: Clock,
+    color: "#f59e42", // bright yellow-orange
+  },
+  {
+    text: "Affordable & Transparent Pricing",
+    icon: Wallet,
+    color: "#fde047", // bright yellow
+  },
+  {
+    text: "Innovative & Customized Solutions",
+    icon: Sparkles,
+    color: "#f472b6", // bright pink
+  },
+];
 
+const About = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -27,15 +43,18 @@ const About = () => {
         <h2 className="text-3xl font-bold text-center text-white mb-12">
           Why Choose Us?
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {benefits.map((benefit) => (
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {benefitData.map(({ text, icon: Icon, color }) => (
             <div
-              key={benefit}
-              className="m-6 p-6 rounded-lg bg-gradient-to-br from-gray-100 to-cyan-300 dark:from-cyan-500 dark:to-indigo-900 text-center transform hover:scale-105 transition-transform hover:shadow-neumorph"
+              key={text}
+              className="m-3 p-6 rounded-lg bg-gradient-to-br from-gray-100 to-cyan-300 dark:from-cyan-500 dark:to-indigo-900 text-center transform hover:scale-105 transition-transform hover:shadow-neumorph"
             >
-              <CheckCircle className="h-12 w-12 text-dark-400 mx-auto mb-4" />
+              <Icon
+                style={{ color }}
+                className="h-12 w-12 mx-auto mb-4 drop-shadow-lg"
+              />
               <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">
-                {benefit}
+                {text}
               </h3>
             </div>
           ))}

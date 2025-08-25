@@ -39,11 +39,11 @@ const Services = () => {
         <h2 className="text-3xl font-bold text-center text-white mb-12">
           Our Services
         </h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
           {services.map((service) => (
             <div
               key={service.title}
-              className="bg-gradient-to-br from-gray-100 to-gray-300 dark:from-cyan-700 dark:to-dark-800 p-6 rounded-lg hover:shadow-neumorph shadow-xl transform hover:scale-105 flex flex-col transition-transform"
+              className="w-[90%] max-w-xs bg-gradient-to-br from-gray-100 to-gray-300 dark:from-cyan-700 dark:to-dark-800 p-6 rounded-lg hover:shadow-neumorph shadow-xl transform hover:scale-105 flex flex-col transition-transform"
             >
               <service.icon className="h-12 w-12 text-blue-400 mb-4 mx-auto" />
               <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2 text-center">

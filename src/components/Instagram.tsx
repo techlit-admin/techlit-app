@@ -1,17 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Instagram = () => {
-  return (
-    <div className="bg-gray-200 pe-10">
-      <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-      <iframe
-        src="//lightwidget.com/widgets/e78f15a993df593a859229b2a24334d2.html"
-        scrolling="no"
-        className="lightwidget-widget mx-6 p-6 text-white"
-        style={{ width: "100%", border: 0 }}
-      ></iframe>
-    </div>
-  );
+  const [res, setRes] = useState(null);
+
+  useEffect(() => {
+    fetch("https://api.dev.techlit.in/feed")
+      .then((res) => res.json())
+      .then((data) => setRes(data));
+    console.log(res);
+  }, []);
+
+  return <div className="bg-gray-200 pe-10">{res}</div>;
 };
 
 export default Instagram;

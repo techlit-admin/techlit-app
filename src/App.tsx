@@ -8,14 +8,13 @@ import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import QuickAccessButton from "./components/QuickAccessButton";
-// import Instagram from "./components/Instagram";
+import Instagram from "./components/Instagram";
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-900">
       <Header />
       <Hero />
-      {/* <Instagram /> */}
       <About />
       <Services />
       <Packages />

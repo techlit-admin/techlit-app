@@ -24,31 +24,49 @@ const Contact = () => {
               Get in Touch
             </h3>
             <div className="space-y-4">
-              <p className="flex items-center text-gray-300">
-                <Phone
-                  href="tel:+9676124330"
-                  className="h-5 w-5 mr-3 text-blue-400"
-                />
+              <a
+                href="tel:+919676124330"
+                className="flex items-center text-gray-300 hover:text-blue-400 transition-colors"
+              >
+                <Phone className="h-5 w-5 mr-3 text-blue-400" />
                 +91-9676124330
-              </p>
-              <p className="flex items-center text-gray-300">
-                <Mail
-                  href="mailto:support@techlit.in"
-                  className="h-5 w-5 mr-3 text-blue-400"
-                />
+              </a>
+              <a
+                href="mailto:support@techlit.in"
+                className="flex items-center text-gray-300 hover:text-blue-400 transition-colors"
+              >
+                <Mail className="h-5 w-5 mr-3 text-blue-400" />
                 support@techlit.in
-              </p>
+              </a>
             </div>
             <div className="mt-8">
               <h4 className="font-semibold mb-4 text-white">Follow Us</h4>
               <div className="flex space-x-4">
-                <Facebook className="h-6 w-6 text-gray-300 hover:text-blue-400 cursor-pointer transition-colors" />
+                <a
+                  href="https://www.facebook.com/techlitsolutions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="h-6 w-6 text-gray-300 hover:text-blue-400 cursor-pointer transition-colors" />
+                </a>
                 <Twitter className="h-6 w-6 text-gray-300 hover:text-blue-400 cursor-pointer transition-colors" />
-                <Instagram
+                <a
                   href="https://www.instagram.com/techlit_solutions"
-                  className="h-6 w-6 text-gray-300 hover:text-blue-400 cursor-pointer transition-colors"
-                />
-                <LinkedIn className="h-6 w-6 text-gray-300 hover:text-blue-400 cursor-pointer transition-colors" />
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="h-6 w-6 text-gray-300 hover:text-blue-400 cursor-pointer transition-colors" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/techlit-software-development"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <LinkedIn className="h-6 w-6 text-gray-300 hover:text-blue-400 cursor-pointer transition-colors" />
+                </a>
               </div>
             </div>
           </div>

@@ -40,30 +40,40 @@ const Services = () => {
           Our Services
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="w-[90%] max-w-xs bg-gradient-to-br from-gray-100 to-gray-300 dark:from-cyan-700 dark:to-dark-800 p-6 rounded-lg hover:shadow-neumorph shadow-xl transform hover:scale-105 flex flex-col transition-transform"
-            >
-              <service.icon className="h-12 w-12 text-blue-400 mb-4 mx-auto" />
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2 text-center">
-                {service.title}
-              </h3>
-              {service.items ? (
-                <ul className="mt-4 text-gray-800 dark:text-gray-300 flex-grow">
-                  {service.items.map((item, index) => (
-                    <li key={index} className="flex items-center">
-                      <span className="mr-2">•</span> {item}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="text-gray-800 dark:text-gray-300 flex-grow">
-                  {service.description}
-                </p>
-              )}
-            </div>
-          ))}
+          {services.map((service) => {
+            // Assign a bright color for each icon
+            let iconColor = "#38bdf8"; // cyan for Megaphone
+            if (service.icon === Laptop) iconColor = "#facc15"; // yellow for Laptop
+            if (service.icon === Palette) iconColor = "#ef4444"; // red for Palette
+
+            return (
+              <div
+                key={service.title}
+                className="w-[90%] max-w-xs bg-gradient-to-br from-cyan-700 to-dark-800 p-6 rounded-lg hover:shadow-neumorph shadow-xl transform hover:scale-105 flex flex-col transition-transform"
+              >
+                <service.icon
+                  style={{ color: iconColor }}
+                  className="h-12 w-12 mb-4 mx-auto drop-shadow-lg"
+                />
+                <h3 className="text-xl font-semibold text-white mb-2 text-center">
+                  {service.title}
+                </h3>
+                {service.items ? (
+                  <ul className="mt-4 text-gray-300 flex-grow">
+                    {service.items.map((item, index) => (
+                      <li key={index} className="flex items-center">
+                        <span className="mr-2">•</span> {item}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-gray-300 flex-grow">
+                    {service.description}
+                  </p>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
